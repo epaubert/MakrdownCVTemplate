@@ -1,7 +1,73 @@
-# MakrdownCVTemplate
-Customize the cv.md to your liking
+# CV Template (LaTeX + Markdown) — Example: Alan Turing
 
-Create a PDF with
+This repository provides a clean, customizable CV/resume template using **Markdown** and **LaTeX**, rendered via [Pandoc](https://pandoc.org/).
 
-`pandoc cv.md --template=template-cv.tex -o cv.pdf`
+Use this project as a starting point for your own CV — just edit the Markdown file!
 
+---
+
+## How It Works
+
+Write your CV in simple `cv.md` (Markdown), and render it to a polished PDF using a custom LaTeX template.
+
+To generate the PDF:
+
+    pandoc cv.md --template=template-cv.tex -o cv.pdf
+
+---
+
+## Files
+
+- `cv.md` — Your CV content (edit this)
+- `template-cv.tex` — Custom LaTeX template for styling
+- `cv.pdf` — Output example (Alan Turing's CV)
+- `README.md` — Repo documentation
+
+---
+
+## Getting Started
+
+1. **Install Pandoc**  
+
+2. **Install a LaTeX distribution**  
+
+3. **Render the CV**
+
+    From your terminal, run:
+
+        pandoc cv.md --template=template-cv.tex -o cv.pdf
+
+---
+
+## Customization
+
+- Edit `cv.md` with your own information
+- Tweak `template-cv.tex` to change layout, fonts, spacing, or icons
+
+---
+
+## Example: Alan Turing
+
+This template includes a fictional CV for **Alan Turing**, showing how to structure professional experience, education, skills, and achievements.
+
+---
+
+## Why Markdown?
+
+- Simple and readable
+- No LaTeX knowledge required for content editing
+- Perfect for versioning with Git
+
+---
+
+## License
+
+This project is MIT licensed.  
+Feel free to use, adapt, and share it for personal or professional use.
+
+---
+
+## Contribute
+
+Have suggestions? Want to improve the template?  
+Pull requests and issues are welcome.
