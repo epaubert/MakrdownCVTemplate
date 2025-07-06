@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
+\usepackage{fontawesome} % Import FontAwesome for icons
+
+\geometry{margin=3cm}
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} % Fix for tightlist error
+
+% Adjust section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
+April\or May \or June\or July\or August\or September\or October\or November\or %
+December\fi, \number \year}
+
+% Custom commands for CV
+\newcommand{\cvsection}[1]{\section*{#1}}
+\newcommand{\cvsubsection}[1]{\subsection*{#1}}
+\newcommand{\cvitem}[2]{\textbf{#1} \hfill #2}
+
+% Document starts
+\begin{document}
+
+% Title and Contact
+\begin{center}
+    \begin{minipage}[t]{0.6\textwidth}
+        \raggedright
+        {\huge \textbf{$name$}} % Name on the left
+    \end{minipage}%
+    %\vspace{0.5cm} % Add some space before sections
+    \begin{minipage}[t]{0.4\textwidth}
+        \raggedleft
+        \href{tel:$phone$}{$phone$ \faPhone} \\ %\hspace{0.5cm}
+        \href{mailto:$email$}{$email$ \faEnvelope}\\ %\hspace{0.5cm}
+        \href{https://$website$}{$website$ \faGlobe} \\ %\hspace{0.5cm}
+        \href{https://linkedin.com/in/$linkedin$}{linkedin.com/in/$linkedin$ \faLinkedin}\\ % \hspace{0.5cm}
+        \href{https://github.com/$github$}{github.com/$github$ \faGithub}\\
+        $address$ \\ 
+    \end{minipage}
+\end{center}
+
+\vspace{0.5cm} % Add some space before sections
+
+% The main body of the CV from Markdown
+$body$
+
+\end{document}
