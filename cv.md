@@ -2,6 +2,7 @@
 # pandoc cv.md --template=template-cv.tex -o cv.pdf
 template: "template-cv.tex"
 name: "Alan Mathison Turing"
+jobtitle: Amazing Matematician
 email: "alan.turing@bletchleypark.org.uk"
 phone: "+44 1234 567890"
 website: "www.turing.org.uk"

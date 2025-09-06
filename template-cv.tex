@@ -5,23 +5,35 @@
 \usepackage{parskip}
 \usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
 \usepackage{fontawesome} % Import FontAwesome for icons
+\usepackage[spanish,es-tabla]{babel} % Escritura en castellano.
 
-\geometry{margin=3cm}
+\geometry{margin=1.8cm}
 
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} % Fix for tightlist error
 
 % Adjust section formatting
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
 
-\renewcommand{\today}{\ifcase \month \or January\or February\or March\or %
-April\or May \or June\or July\or August\or September\or October\or November\or %
-December\fi, \number \year}
+\titleformat{\section}
+  {\Large\bfseries\centering} % Tamaño más grande y negrita
+  {}{0em}{}[\titlerule] % línea debajo
+
+\titleformat{\subsection}
+  {\large\bfseries\itshape\centering} % un poco más grande que el texto normal, negrita+itálica
+  {}{0em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries} % igual al texto pero en negrita
+  {}{0em}{}
 
 % Custom commands for CV
 \newcommand{\cvsection}[1]{\section*{#1}}
 \newcommand{\cvsubsection}[1]{\subsection*{#1}}
-\newcommand{\cvitem}[2]{\textbf{#1} \hfill #2}
+\newcommand{\cvsubsubsection}[1]{\subsubsection*{#1}}
+
+\newcommand{\cvparagraph}[1]{\paragraph*{#1}}
+\newcommand{\cvsubparagraph}[1]{\subparagraph*{#1}}
+
+\newcommand{\cvitem}[2]{\textbf{#1:} #2}
 
 % Document starts
 \begin{document}
@@ -30,16 +42,17 @@ December\fi, \number \year}
 \begin{center}
     \begin{minipage}[t]{0.6\textwidth}
         \raggedright
-        {\huge \textbf{$name$}} % Name on the left
+        {\huge \textbf{$name$}} \\ \vspace{1.0cm}% Name on the left
+        {\LARGE \textbf{$jobtitle$}} % Name on the left
     \end{minipage}%
     %\vspace{0.5cm} % Add some space before sections
     \begin{minipage}[t]{0.4\textwidth}
         \raggedleft
         \href{tel:$phone$}{$phone$ \faPhone} \\ %\hspace{0.5cm}
         \href{mailto:$email$}{$email$ \faEnvelope}\\ %\hspace{0.5cm}
-        \href{https://$website$}{$website$ \faGlobe} \\ %\hspace{0.5cm}
-        \href{https://linkedin.com/in/$linkedin$}{linkedin.com/in/$linkedin$ \faLinkedin}\\ % \hspace{0.5cm}
-        \href{https://github.com/$github$}{github.com/$github$ \faGithub}\\
+        %\href{https://$website$}{$website$ \faGlobe\} \\ %\hspace{0.5cm}
+        \href{https://www.linkedin.com/in/$linkedin$}{linkedin.com/in/$linkedin$ \faLinkedin}\\ % \hspace{0.5cm}
+        \href{https://www.github.com/$github$}{github.com/$github$ \faGithub}\\
         $address$ \\ 
     \end{minipage}
 \end{center}
@@ -48,5 +61,8 @@ December\fi, \number \year}
 
 % The main body of the CV from Markdown
 $body$
+
+% TODO: Encontrar una manera de hacer esto más genérico
+% \footnotetext{\today}
 
 \end{document}
