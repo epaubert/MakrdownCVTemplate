@@ -1,6 +1,8 @@
 ---
 # pandoc cv.md --template=template-cv.tex -o cv.pdf
 template: "template-cv.tex"
+# babeloptions: "spanish,es-tabla"
+babeloptions: "british"
 name: "Alan Mathison Turing"
 jobtitle: Amazing Matematician
 email: "alan.turing@bletchleypark.org.uk"
@@ -9,6 +11,8 @@ website: "www.turing.org.uk"
 github: "am-turing"
 linkedin: "alanturing"
 address: "Wilmslow, Cheshire, England"
+thisrepolink: "https://github.com/epaubert/MakrdownCVTemplate"
+thisreponame: "MakrdownCVTemplate"
 ---
 
 # Professional Profile
@@ -26,6 +30,9 @@ Philosophy of mind,
 Mathematics.
 
 # Work Experience
+- \cvjobtitle{Cryptanalyst}{Government Code and Cypher School (GC\&CS), Bletchley Park}{1939--1945}
+  - Led the **Hut 8** team deciphering **German naval Enigma**
+  - Developed the **Bombe**, an electromechanical device used to accelerate codebreaking
 - **1939 – 1945**: __Cryptanalyst__ @ Government Code and Cypher School (GC&CS), Bletchley Park
   - Led the **Hut 8** team deciphering **German naval Enigma**
   - Developed the **Bombe**, an electromechanical device used to accelerate codebreaking

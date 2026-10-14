@@ -1,42 +1,14 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage{geometry}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{parskip}
-\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
-\usepackage{fontawesome} % Import FontAwesome for icons
-\usepackage[spanish,es-tabla]{babel} % Escritura en castellano.
-
-\geometry{margin=2.0cm}
-
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} % Fix for tightlist error
-
-% Adjust section formatting
-
-\titleformat{\section}
-  {\Large\bfseries\centering} % Tamaño más grande y negrita
-  {}{0em}{}[\titlerule] % línea debajo
-
-\titleformat{\subsection}
-  {\large\bfseries\itshape\centering} % un poco más grande que el texto normal, negrita+itálica
-  {}{0em}{}
-
-\titleformat{\subsubsection}
-  {\normalsize\bfseries} % igual al texto pero en negrita
-  {}{0em}{}
-
-% Custom commands for CV
-\newcommand{\cvsection}[1]{\section*{#1}}
-\newcommand{\cvsubsection}[1]{\subsection*{#1}}
-\newcommand{\cvsubsubsection}[1]{\subsubsection*{#1}}
-
-\newcommand{\cvparagraph}[1]{\paragraph*{#1}}
-\newcommand{\cvsubparagraph}[1]{\subparagraph*{#1}}
-
-\newcommand{\cvitem}[2]{\textbf{#1:} #2}
+\documentclass{template-cv}
+\usepackage[$babeloptions$]{babel}
 
 % Document starts
 \begin{document}
+
+% use fancy on first page for correct footer formatting
+\thispagestyle{fancy}
+
+\cvfooter{$thisrepolink$}{$thisreponame$}
+
 
 % Title and Contact
 \begin{center}
@@ -61,8 +33,5 @@
 
 % The main body of the CV from Markdown
 $body$
-
-% TODO: Encontrar una manera de hacer esto más genérico
-% \footnotetext{\today}
 
 \end{document}

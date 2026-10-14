@@ -19,7 +19,8 @@ To generate the PDF:
 ## Files
 
 - `cv.md` — Your CV content (edit this)
-- `template-cv.tex` — Custom LaTeX template for styling
+- `template-cv.tex` — Custom LaTeX template that maps the CV content to the document layout
+- `template-cv.cls` — Custom LaTeX document class that defines the structure and semantics, such as section formatting, custom commands, and packages
 - `cv.pdf` — Output example (Alan Turing's CV)
 - `README.md` — Repo documentation
 
@@ -42,7 +43,33 @@ To generate the PDF:
 ## Customization
 
 - Edit `cv.md` with your own information
-- Tweak `template-cv.tex` to change layout, fonts, spacing, or icons
+- Tweak `template-cv.tex` to change content mapping, spacing, and icon use
+- Tweak `template-cv.cls` to update custom layout and styling commands and packages
+
+### Language settings
+
+You can set your babel package options as a directive in `cv.md`.
+For example:
+```
+babeloptions: "spanish,es-tabla"
+```
+
+or
+
+```
+babeloptions: "british"
+```
+
+
+### Formatting CV entries
+
+For right-aligned dates in each job entry, you can use the following custom command in `cv.md`:
+
+```
+\cvjobtitle{Job Title}{Company Name, Location}{Date start--Date end}
+```
+
+> Hint: `\cvjobtitle` and other custom commands are editable in `template-cv.cls`.
 
 ---
 
